@@ -329,7 +329,7 @@
         font-size: 35px;
       }
       #es-vichy.es-vichy .es-kv__title sup {
-        vertical-align: top;
+        vertical-align: baseline;
         font-size: 12px;
       }
       #es-vichy.es-vichy .es-kv__subtitle {
@@ -353,7 +353,7 @@
         line-height: 1.4;
       }
       #es-vichy.es-vichy .es-kv__subtitle sup {
-        vertical-align: top;
+        vertical-align: baseline;
         font-size: 12px;
       }
       #es-vichy.es-vichy .es-icons {
@@ -1214,11 +1214,11 @@
           justify-content: flex-start;
           align-items: center;
           background: url(./assets/images/dermatologist-bg.png) center no-repeat;
-          min-height: 300px;
+          min-height: 220px;
           background-size: cover;
         }
         #es-vichy.es-vichy .es-dermatologits__content {
-          padding-left: 15%;
+          padding-left: 5%;
         }
         #es-vichy.es-vichy .es-dermatologits__subtitle {
           margin-left: 10px;
@@ -1371,7 +1371,7 @@
         #es-vichy.es-vichy .es-compare__mobile-wrapper {
           margin: 0 auto;
           flex-wrap: wrap;
-          justify-content: center;
+          justify-content: space-around;
           gap: 30px;
           margin-bottom: 40px;
         }
@@ -1529,7 +1529,7 @@
       }
       @media screen and (min-width: 1200px) {
         #es-vichy.es-vichy .es-cross__container {
-          justify-content: space-between;
+          justify-content: center;
         }
         #es-vichy.es-vichy .es-cross__single:not(:last-child) {
           margin-bottom: 25px;
@@ -1570,7 +1570,7 @@
           top: -20px;
         }
         #es-vichy.es-vichy .es-icons__title {
-          font-size: 13px;
+          font-size: 11px;
         }
         #es-vichy.es-vichy .es-ingr__slides--desktop {
           max-width: 700px;
@@ -1596,10 +1596,6 @@
         #es-vichy.es-vichy .es-kv__logo img {
           max-width: 80%;
         }
-        #es-vichy.es-vichy .es-kv__images {
-          justify-content: flex-start;
-          padding-bottom: 20px;
-        }
         #es-vichy.es-vichy .es-kv__disc-wrapper {
           margin-top: -15px;
           z-index: 1;
@@ -1623,7 +1619,7 @@
         }
         #es-vichy.es-vichy .es-ingr__slides--desktop {
           max-width: none;
-          gap: 0;
+          gap: 55px;
         }
         #es-vichy.es-vichy .es-cross__text {
           max-width: 250px;
@@ -1688,6 +1684,45 @@
         }
         #es-vichy.es-vichy .es-compare__single {
           min-width: 190px;
+        }
+
+        #es-vichy.es-vichy .es-kv__images {
+          justify-content: flex-start;
+          padding-bottom: 20px;
+        }
+
+        #es-vichy.es-vichy .es-icons__title {
+          font-size: 13px;
+        }
+
+        #es-vichy.es-vichy .es-dermatologits__wrapper {
+          min-height: 300px;
+        }
+
+        #es-vichy.es-vichy .es-dermatologits__content {
+          padding-left: 15%;
+        }
+
+        #es-vichy.es-vichy .es-ingr__img {
+          max-width: 185px;
+        }
+
+        #es-vichy.es-vichy .es-ingr__single {
+          max-width: 160px;
+        }
+
+        #es-vichy.es-vichy .es-ingr__img--2,
+        #es-vichy.es-vichy .es-ingr__img--3 {
+          max-width: 160px;
+          margin-left: 10px;
+        }
+
+        #es-vichy.es-vichy .es-ingr__slides--desktop {
+          gap: 0px;
+        }
+
+        #es-vichy.es-vichy .es-cross__container {
+          justify-content: space-between;
         }
       }
       @keyframes slidedown {
