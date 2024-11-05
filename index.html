@@ -329,7 +329,7 @@
         font-size: 35px;
       }
       #es-vichy.es-vichy .es-kv__title sup {
-        vertical-align: baseline;
+        vertical-align: top;
         font-size: 12px;
       }
       #es-vichy.es-vichy .es-kv__subtitle {
@@ -353,7 +353,7 @@
         line-height: 1.4;
       }
       #es-vichy.es-vichy .es-kv__subtitle sup {
-        vertical-align: baseline;
+        vertical-align: top;
         font-size: 12px;
       }
       #es-vichy.es-vichy .es-icons {
@@ -1158,6 +1158,83 @@
         }
       }
 
+      @media screen and (min-width: 520px) {
+        #es-vichy.es-vichy .es-info__text--1 {
+          margin-left: 8%;
+        }
+        #es-vichy.es-vichy .es-info__text--2 {
+            margin-left: 22%;
+        }
+        #es-vichy.es-vichy .es-info__text--3 {
+          margin-left: 21%;
+          margin-top: 14%;
+        }
+        #es-vichy.es-vichy .es-info__text--4 {
+          margin-left: 10%;
+          margin-top: 13%;
+        }
+
+        #es-vichy.es-vichy .es-dermatologits__content {
+          max-width: 595px;
+          margin: 0 auto;
+        } 
+      }
+      @media screen and (min-width: 650px) {
+        #es-vichy.es-vichy .es-info__text--2 {
+          margin-left: 18%;
+        }
+        #es-vichy.es-vichy .es-info__text--3 {
+          margin-left: 21%;
+          margin-top: 11%;
+        }
+        #es-vichy.es-vichy .es-info__text--4 {
+          margin-left: 9%;
+          margin-top: 10%;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        #es-vichy.es-vichy .es-info__text--1 {
+          margin-left: 12%;
+        }
+
+        #es-vichy.es-vichy .es-info__text--2 {
+          margin-left: 27%;
+        }
+
+        #es-vichy.es-vichy .es-info__text--3 {
+          margin-left: 26%;
+          margin-top: 14%;
+        }
+        #es-vichy.es-vichy .es-info__text--4 {
+          margin-left: 12%;
+          margin-top: 14%;
+        }
+      }
+
+      @media screen and (min-width: 850px) {
+        #es-vichy.es-vichy .es-info__text--1 {
+          margin-left: 7%;
+        }
+        #es-vichy.es-vichy .es-info__text--2 {
+            margin-left: 20%;
+        }
+        #es-vichy.es-vichy .es-info__text--3 {
+            margin-left: 21%;
+            margin-top: 12%;
+        }
+        #es-vichy.es-vichy .es-info__text--4 {
+            margin-left: 9%;
+            margin-top: 14%;
+        }
+      }
+      @media screen and (min-width: 1150px) {
+        #es-vichy.es-vichy .es-info__text--4 {
+          margin-left: 9%;
+          margin-top: 9%;
+        }
+      }
+
       @media screen and (min-width: 1200px) {
         #es-vichy.es-vichy .es-kv__content {
           min-height: 625px;
@@ -1208,6 +1285,8 @@
         #es-vichy.es-vichy .es-dermatologits__content {
           display: flex;
           flex-direction: column;
+          max-width: none;
+          margin: unset;
         }
         #es-vichy.es-vichy .es-dermatologits__wrapper {
           display: flex;
@@ -1618,7 +1697,6 @@
           max-width: 160px;
         }
         #es-vichy.es-vichy .es-ingr__slides--desktop {
-          max-width: none;
           gap: 55px;
         }
         #es-vichy.es-vichy .es-cross__text {
@@ -1718,6 +1796,7 @@
         }
 
         #es-vichy.es-vichy .es-ingr__slides--desktop {
+          max-width: none;
           gap: 0px;
         }
 
@@ -1859,7 +1938,7 @@
               <p class="es-info__text es-info__text--2">
                 Naharakud uuenevad iga ööga, näonahk muutub märgatavalt siledamaks,
                 <span class="es-info__text--bold">
-                  ja pigmendilaiguvabaks
+                  ja&nbsp;pigmendilaiguvabaks
                 </span>
               </p>
             </li>
