@@ -331,6 +331,7 @@
       #es-vichy.es-vichy .es-kv__title sup {
         vertical-align: top;
         font-size: 12px;
+        top: 0;
       }
       #es-vichy.es-vichy .es-kv__subtitle {
         margin: 0;
@@ -355,6 +356,7 @@
       #es-vichy.es-vichy .es-kv__subtitle sup {
         vertical-align: top;
         font-size: 12px;
+        top: 0;
       }
       #es-vichy.es-vichy .es-icons {
         background-color: #f4f4f4;
@@ -1369,9 +1371,9 @@
         }
         #es-vichy.es-vichy .es-cross__container {
           gap: 10px;
-          flex-flow: row;
+          flex-flow: column;
           flex-wrap: wrap;
-          align-items: flex-end;
+          align-items: center;
         }
         #es-vichy.es-vichy .es-video__player--mobile {
           display: none;
@@ -1390,14 +1392,8 @@
         #es-vichy.es-vichy .es-ingr__container::before {
           display: none;
         }
-        #es-vichy.es-vichy .es-slick-carousel--mobile,
-        #es-vichy.es-vichy .slick-button-prev,
-        #es-vichy.es-vichy .slick-button-next,
-        #es-vichy.es-vichy .es-slider__arrow {
-          display: none;
-        }
         #es-vichy.es-vichy .es-ingr__single {
-          max-width: 160px;
+          max-width: 300px;
           transition: all 0.3s ease;
         }
         #es-vichy.es-vichy .es-ingr .es-ingr__slides:hover .es-ingr__single {
@@ -1410,9 +1406,6 @@
         #es-vichy.es-vichy .es-ingr__img {
           max-width: 200px;
           margin-bottom: 30px;
-        }
-        #es-vichy.es-vichy .es-ingr__img--mobile {
-          display: none;
         }
         #es-vichy.es-vichy .es-ingr__img--desktop {
           display: block;
@@ -1435,15 +1428,7 @@
         #es-vichy.es-vichy .es-ingr__label--1 {
           margin-top: -60px;
         }
-        #es-vichy.es-vichy .es-ingr__slides--desktop {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-around;
-          align-items: flex-start;
-          max-width: 620px;
-          gap: 30px;
-          margin: 0 auto;
-        }
+
         #es-vichy.es-vichy .es-compare {
           padding-bottom: 0;
         }
@@ -1583,12 +1568,6 @@
         }
         #es-vichy.es-vichy .es-ingr__title br {
           display: none;
-        }
-        #es-vichy.es-vichy .es-ingr__container {
-          max-width: 730px;
-          margin: 0 auto;
-          padding: 0;
-          justify-content: space-between;
         }
         #es-vichy.es-vichy .es-ingr__single {
           padding: 0;
@@ -1748,7 +1727,39 @@
           font-size: 12px;
         }
       }
+      @media screen and (min-width: 1280px) {
+        #es-vichy.es-vichy .es-cross__container {
+          gap: 10px;
+          flex-flow: row;
+          flex-wrap: wrap;
+          align-items: flex-end;
+        }
+      }
       @media screen and (min-width: 1400px) {
+        #es-vichy.es-vichy .es-ingr__slides--desktop {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          align-items: flex-start;
+          max-width: 620px;
+          gap: 30px;
+          margin: 0 auto;
+        }
+        #es-vichy.es-vichy .es-ingr__container {
+          max-width: 730px;
+          margin: 0 auto;
+          padding: 0;
+          justify-content: space-between;
+        }
+        #es-vichy.es-vichy .es-ingr__img--mobile {
+          display: none;
+        }
+        #es-vichy.es-vichy .es-slick-carousel--mobile,
+        #es-vichy.es-vichy .slick-button-prev,
+        #es-vichy.es-vichy .slick-button-next,
+        #es-vichy.es-vichy .es-slider__arrow {
+          display: none;
+        }
         #es-vichy.es-vichy .es-compare__mobile-wrapper {
           flex-wrap: nowrap;
           justify-content: space-between;
@@ -2712,12 +2723,31 @@
     $(document).ready(function () {
       $('.es-slick-carousel:not(.slick-initialized)').slick({
         infinite: false,
-        slidesToShow: 1,
-        centerMode: true,
-        cssEase: 'linear',
+        slidesToShow: 3,
+        centerMode: false,
+        variableWidth: false,
         prevArrow: '.slick-button-prev',
         nextArrow: '.slick-button-next',
-        variableWidth: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              centerMode: true,
+              variableWidth: false,
+            }
+          },
+          {
+          breakpoint: 1200,
+            settings: {
+              slidesToShow: 1,
+              centerMode: true,
+              variableWidth: false,
+              prevArrow: '.slick-button-prev',
+              nextArrow: '.slick-button-next',
+            }
+          }
+        ]
       });
     });
 
